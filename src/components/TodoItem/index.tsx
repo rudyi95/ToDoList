@@ -6,14 +6,13 @@ import { useAppDispatch } from "../../hooks/redux";
 import { completeTask, removeTodo } from "../../service/todosService";
 import { TodoItem } from "../../types/todo";
 
-import { useStyles } from "./style";
+import classes from "./style.module.scss";
 
 interface IProps {
   todo: TodoItem;
 }
 
 export const Todo: React.FC<IProps> = ({ todo }) => {
-  const classes = useStyles();
   const dispatch = useAppDispatch();
 
   const checkboxClick = () => {

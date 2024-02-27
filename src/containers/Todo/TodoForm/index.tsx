@@ -6,10 +6,9 @@ import { Button } from "../../../components";
 import { useAppDispatch } from "../../../hooks/redux";
 import { addTodo, filterTodos, removeAll } from "../../../service/todosService";
 
-import { useStyles } from "./style";
+import classes from "./style.module.scss";
 
 const ToDoForm: React.FC = () => {
-  const classes = useStyles();
   const dispatch = useAppDispatch();
   const [todo, setTodo] = useState({
     id: "",
@@ -61,4 +60,4 @@ const ToDoForm: React.FC = () => {
   );
 };
 
-export default ToDoForm
+export default ToDoForm;

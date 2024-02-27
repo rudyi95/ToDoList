@@ -6,10 +6,9 @@ import { TodoItem } from "../../../types/todo";
 import { useAppDispatch, useAppSelector } from "../../../hooks/redux";
 import { getAllTodos } from "../../../service/todosService";
 
-import { useStyles } from "./style";
+import classes from './style.module.scss'
 
 const ToDoList: React.FC = () => {
-  const classes = useStyles();
   const dispatch = useAppDispatch();
   const { all } = useAppSelector((state) => state.todos);
 

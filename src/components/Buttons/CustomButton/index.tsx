@@ -1,7 +1,4 @@
 import React, { BaseSyntheticEvent } from "react";
-import classnames from "classnames";
-
-import { useStyles } from "./style";
 
 interface IProps {
   className?: string;
@@ -11,11 +8,9 @@ interface IProps {
   type?: "button" | "reset" | "submit" | undefined;
 }
 const CustomButton: React.FC<IProps> = ({ className, text, onClick, value, type }) => {
-  const classes = useStyles();
-
   return (
     <button
-      className={classnames(classes.root, className)}
+      className={className}
       value={value || text}
       type={type}
       onClick={onClick}
